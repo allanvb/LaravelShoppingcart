@@ -9,6 +9,7 @@ use Gloudemans\Shoppingcart\Exceptions\InvalidCalculatorException;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Traits\Macroable;
 use ReflectionClass;
 
 /**
@@ -25,6 +26,8 @@ use ReflectionClass;
  */
 class CartItem implements Arrayable, Jsonable
 {
+    use Macroable;
+
     /**
      * The rowID of the cart item.
      *
