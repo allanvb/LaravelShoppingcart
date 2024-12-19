@@ -1,3 +1,7 @@
+# Attention
+Due to the difficulty experienced by certain individuals and companies in comprehending the [copyleft provision of the MIT license](https://github.com/bumbummen99/LaravelShoppingcart/blob/1c50fb564826b6ee748d2d9afad7447b6884166e/LICENSE#L12), as evidenced by the unauthorized relicensing of my work and that of others, I have opted to terminate all further development and assistance for this repository. Given that this package is intended for use in e-commerce projects, it is expected that the necessary resources would be available for the development and support of your own solutions.
+
+
 ## LaravelShoppingcart
 ![CI Code Checks](https://github.com/bumbummen99/LaravelShoppingcart/workflows/CI%20Code%20Checks/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/bumbummen99/LaravelShoppingcart/branch/master/graph/badge.svg)](https://codecov.io/gh/bumbummen99/LaravelShoppingcart)
@@ -7,7 +11,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/bumbummen99/shoppingcart/v/unstable)](https://packagist.org/packages/bumbummen99/shoppingcart)
 [![License](https://poser.pugx.org/bumbummen99/shoppingcart/license)](https://packagist.org/packages/bumbummen99/shoppingcart)
 
-This is a fork of [Crinsane's LaravelShoppingcart](https://github.com/Crinsane/LaravelShoppingcart) extended with minor features compatible with Laravel 7+. An example integration can be [found here](https://github.com/bumbummen99/LaravelShoppingcartDemo).
+This is a fork of [Crinsane's LaravelShoppingcart](https://github.com/Crinsane/LaravelShoppingcart) extended with minor features compatible with Laravel 8+. An example integration can be [found here](https://github.com/bumbummen99/LaravelShoppingcartDemo).
 
 ## Installation
 
@@ -26,6 +30,10 @@ You definitely should publish the `config` file and take a look at it.
     php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 This will give you a `cart.php` config file in which you can make changes to the packages behaivor.
+
+## Updates
+
+As of version **4.2.0** this package does, when being used with PostgreSQL, encode the cart content to base64 before storing into database due to an [issue with saving values including zero bytes](https://github.com/bumbummen99/LaravelShoppingcart/pull/167). Please consider clearing your cart table in case you are upgrading using PostgreSQL from a version **<4.2.0**.
 
 ## Table of Contents
 Look at one of the following topics to learn more about LaravelShoppingcart
@@ -788,13 +796,20 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/ChrisThompsonTLDR">
+            <img src="https://avatars.githubusercontent.com/u/348801?v=4" width="100;" alt="ChrisThompsonTLDR"/>
+            <br />
+            <sub><b>Chris Thompson</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/Jam-Iko">
             <img src="https://avatars.githubusercontent.com/u/44161368?v=4" width="100;" alt="Jam-Iko"/>
             <br />
             <sub><b>Jam-Iko</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/mattusik">
             <img src="https://avatars.githubusercontent.com/u/1252223?v=4" width="100;" alt="mattusik"/>
@@ -824,6 +839,14 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/macbookandrew">
+            <img src="https://avatars.githubusercontent.com/u/784333?v=4" width="100;" alt="macbookandrew"/>
+            <br />
+            <sub><b>Andrew Minion</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/dtwebuk">
             <img src="https://avatars.githubusercontent.com/u/6045378?v=4" width="100;" alt="dtwebuk"/>
             <br />
@@ -836,8 +859,7 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
             <br />
             <sub><b>Edwin Aw</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/manojo123">
             <img src="https://avatars.githubusercontent.com/u/20805943?v=4" width="100;" alt="manojo123"/>
@@ -865,7 +887,8 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
             <br />
             <sub><b>Adam Engebretson</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/andcl">
             <img src="https://avatars.githubusercontent.com/u/8470427?v=4" width="100;" alt="andcl"/>
@@ -879,8 +902,7 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
             <br />
             <sub><b>Filip Ganyicz</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/guysolamour">
             <img src="https://avatars.githubusercontent.com/u/22590722?v=4" width="100;" alt="guysolamour"/>
@@ -908,7 +930,8 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
             <br />
             <sub><b>John Markese</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/nexxai">
             <img src="https://avatars.githubusercontent.com/u/4316564?v=4" width="100;" alt="nexxai"/>
@@ -922,8 +945,14 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
             <br />
             <sub><b>Mahbub Rabbani</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
+    <td align="center">
+        <a href="https://github.com/mauriciv">
+            <img src="https://avatars.githubusercontent.com/u/12043163?v=4" width="100;" alt="mauriciv"/>
+            <br />
+            <sub><b>Mauricio Vera</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/xpundel">
             <img src="https://avatars.githubusercontent.com/u/1384653?v=4" width="100;" alt="xpundel"/>
@@ -944,7 +973,8 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
             <br />
             <sub><b>Niels Stampe</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/4ilo">
             <img src="https://avatars.githubusercontent.com/u/15938739?v=4" width="100;" alt="4ilo"/>
@@ -960,10 +990,67 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/quintenbuis">
+            <img src="https://avatars.githubusercontent.com/u/36452184?v=4" width="100;" alt="quintenbuis"/>
+            <br />
+            <sub><b>Quinten Buis</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/publiux">
             <img src="https://avatars.githubusercontent.com/u/2847188?v=4" width="100;" alt="publiux"/>
             <br />
             <sub><b>Raul Ruiz</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/royduin">
+            <img src="https://avatars.githubusercontent.com/u/1703233?v=4" width="100;" alt="royduin"/>
+            <br />
+            <sub><b>Roy Duineveld</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/CaddyDz">
+            <img src="https://avatars.githubusercontent.com/u/13698160?v=4" width="100;" alt="CaddyDz"/>
+            <br />
+            <sub><b>Salim Djerbouh</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/pendalff">
+            <img src="https://avatars.githubusercontent.com/u/236587?v=4" width="100;" alt="pendalff"/>
+            <br />
+            <sub><b>Fukalov Sem</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sobhanatar">
+            <img src="https://avatars.githubusercontent.com/u/1507325?v=4" width="100;" alt="sobhanatar"/>
+            <br />
+            <sub><b>Sobhan Atar</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/mightyteja">
+            <img src="https://avatars.githubusercontent.com/u/2662727?v=4" width="100;" alt="mightyteja"/>
+            <br />
+            <sub><b>Teja Babu S</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kekenec">
+            <img src="https://avatars.githubusercontent.com/u/11806874?v=4" width="100;" alt="kekenec"/>
+            <br />
+            <sub><b>Kekenec</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sasin91">
+            <img src="https://avatars.githubusercontent.com/u/808722?v=4" width="100;" alt="sasin91"/>
+            <br />
+            <sub><b>Sasin91</b></sub>
         </a>
     </td></tr>
 </table>
